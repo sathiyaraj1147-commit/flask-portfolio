@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Welcome to {{ name }}'s Portfolio</h1>
+
+    <h2>My Skills</h2>
+    <ul>
+        {% for s in skills %}
+            <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/contact">Contact Me</a>
+</body>
+</html>
