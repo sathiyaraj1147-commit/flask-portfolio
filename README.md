@@ -1,21 +1,27 @@
-# flask-portfoliofrom flask import Flask, render_template, request
+# Flask Portfolio Website
 
-app = Flask(__name__)
+A simple personal portfolio website built using Python Flask and HTML templates.
 
-@app.route("/")
-def home():
-    name = "Your Name"
-    skills = ["Python", "Flask", "HTML", "CSS"]
-    return render_template("index.html", name=name, skills=skills)
+## Features
+- Home page with introduction
+- Skills list
+- Contact form
+- Flask routing
+- Template rendering
 
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
-    if request.method == "POST":
-        username = request.form.get("username")
-        email = request.form.get("email")
-        message = request.form.get("message")
-        return f"Thanks {username}, your message has been received!"
-    return render_template("contact.html")
+## Project Structure
+portfolio/
+│── app.py
+│── requirements.txt
+│── static/
+│     └── style.css
+└── templates/
+      ├── index.html
+      └── contact.html
 
-if __name__ == "__main__":
-    app.run(debug=True)
+## Run the Project
+pip install -r requirements.txt
+python app.py
+
+Then open:
+http://127.0.0.1:5000/
